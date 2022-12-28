@@ -6,7 +6,7 @@ $( document ).ready(function() {
     $.ajax({
         url: "data.json"
     }).done(function (data) {
-        //$(this).addClass("done");
+        $(this).addClass("done");
         console.log("DONE",data)
         for (let d in data){
             // save the data record into our global variable
@@ -17,6 +17,7 @@ $( document ).ready(function() {
                 <td>${data[d].phone}</td>
             </tr>`
             //$(`#data-table tr:last`).after(dataStr)
+            loadData()
         }
 
         console.log(customers)
