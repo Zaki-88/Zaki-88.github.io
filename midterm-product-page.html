@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Product Table</title>
+    <link rel="stylesheet" href="midterm-main.css">
+</head>
+
+<body onload="loadData()" >
+    <table style="width:70%;">
+        <td class = "add_table" style="width:20%;" >
+            <div align=center >
+                <form>
+                    <h5>Item</h5>
+                    <select id="products">
+                        <option value="null"></option>
+                        <option value="Galaxy Z Fold4">Galaxy Z Fold4</option>
+                        <option value="Apple Charge">Apple Charge</option>
+                        <option value="Xiaomi Ionic Hair Dryer">Xiaomi Ionic Hair Dryer</option>
+                        <option value="Dyson v12 detect slim">Dyson v12 detect slim</option>
+                    </select><br>
+                    <label for="ppu">Price Per Unit:</label><br>
+                    <input type="number" id="ppu" name="ppu"><br>
+                    <label for="quantity">Quantity:</label><br>
+                    <input type="number" id="qty" name="quantity"><br>
+                    <label for="discount">Discount:</label><br>
+                    <input type="number" id="discount" name="discount"><br>
+                </form>
+                <HR align="center" style="width: 10.8em;" color=#000000 SIZE=1>
+                    <button onclick="addToList()" style="width: 13.1em; color: aliceblue; background-color: blue;"> Add</button>
+                <!-- Products:
+            <select id="products">
+                <option value="Xiaomi Ionic Hair Dryer H300">Xiaomi Ionic Hair Dryer H300</option>
+                <option value="Galaxy Z Fold4">Galaxy Z Fold4</option>
+                <option value="Apple Charge">Apple Charge</option>
+            </select>
+            Quantity:
+            <input type="number" id="qty" style="width: 5rem;"/>
+            PPU:
+            <input type="number" id="ppu" style="width: 5em;"/> -->
+            
+            </div>
+        </td>
+        <td class="content-cell">
+            <h1 align=left>Quotation</h1>
+            <button onclick="clearAllData()" style="width: 5em; "> Clear</button>
+            <table id="productList" class="product_table left">
+                <thead>
+                    <th style="width: 3%"> </th>
+                    <th style="width: 10%">Qty</th>
+                    <th style="width: 30%">Item</th>
+                    <th style="width: 30%">Price</th>
+                    <th style="width: 20%">Discount</th>
+                    <th style="width: 30%">Amount</th>
+                </thead>
+                <tbody id="productBody">
+
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5" class="text-right">Total discount</td>
+                        <td class="text-right">
+                            <span id="totalDiscount"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-right">Total amount</td>
+                        <td class="text-right">
+                            <span id="gross"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-right">VAT 3%</td>
+                        <td class="text-right">
+                            <span id="vat"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-right">Net</td>
+                        <td class="text-right">
+                            <span id="net"></span>
+                        </td>
+                    </tr>
+                </tfoot>
+        </td>
+    </table>
+    </table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="midterm-products.js"></script>
+</body>
+
+</html>
