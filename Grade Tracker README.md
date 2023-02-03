@@ -1,5 +1,5 @@
 # Zaki-88.github.io
-GPA Calculator:
+Grade Tracker:
 This is a GPA (Grade Point Average) calculator which allows users to calculate the GPA based on their grades.
 
 Technology Stack:
